@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- start head -->
+<head>
+	{% include head.html %}
+</head>
+
+
+<body>
+{% include elheaderdelasentradas.html %}
+
+<!-- start bodyPan -->
+<div id="bodyPan">
+	
+	<!-- start of content -->
+	<div id="bodyLeftPan">
+		{% assign post = site.posts.first %}
+		{{ post.content | markdownify | strip_title | truncatewords: 9 }}
+	</div>
+	<!-- end of content -->
+	
+	<!-- start of sidebar -->
+	<div id="bodyRightPan">
+		{% include sidebardelasentradas.html %}
+	</div>
+	<!-- end of sidedbar -->
+ 
+</div>
+<!-- end bodyPan -->
+
+
+<div id="footermainPan">
+	{% include footer.html %}
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<div id="bodyRightPan">
+    <h2><span>Últimas</span> Entradas</h2>
+    <!--<ol>
+      <li><a href="{{ site.url }}/googleanalisis.html"><span class="boldtext">Crear cuenta en Google Análisis</span></a> </li><br>
+      <li><a href="{{ site.url }}/googlesearchconsole.html"><span class="boldtext">Crear cuenta en Google Search Console</span></a> </li><br>
+      <li><a href="{{ site.url }}/linquiar.html"><span class="boldtext">Linquiar ambas cuentas</span></a> </li><br>
+      <li><a href="{{ site.url }}/iniciarindex.html"><span class="boldtext">Pedir que Google indexe mi página</span></a> </li><br>
+      <li><a href="{{ site.url }}/googletagmanager.html"><span class="boldtext">Usar Google Tag Manager</span></a> </li><br>
+      <li><a href="{{ site.url }}/schemaorgtags.html"><span class="boldtext">Consultar los tags de schema.org </span></a> </li><br>
+      <li><a href="{{ site.url }}/herramientatagsearchconsole.html">Utilizar herramienta de tags en Google Search Console</span></a> </li>
+    </ol>-->
+    {% for post in site.posts limit:5 %}
+		<strong><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></strong>
+		<p class="boldtext">
+			<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+				{% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+				<!--{{ page.date | date: date_format }}-->
+			</time>
+			<span>Postiado en <span class="post-meta">{{ post.date | date: date_format }}</span>
+		</p>
+		<p><span>{{ post.content | markdownify | strip_html | truncatewords: 9 }}</span></p>
+		<p class="more"><a href="{{ post.url | relative_url }}">more</a></p>
+    {% endfor %}
+  </div>
