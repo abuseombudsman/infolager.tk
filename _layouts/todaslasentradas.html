@@ -4,7 +4,7 @@ layout: entradaposteos
 
 <div class="home">
 
-  <!--<h1 class="page-heading">Entradas</h1>-->
+  <!-- <h1 class="page-heading">Entradas</h1> -->
   
   {{ content }}
 
@@ -14,7 +14,7 @@ layout: entradaposteos
 		<p>
 			<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
 				{% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-				<!--{{ page.date | date: date_format }}-->
+				<!-- {{ page.date | date: date_format }} -->
 			</time>
 			Postiado en <span class="post-meta">{{ post.date | date: date_format }}</span>
 		</p>
@@ -23,6 +23,6 @@ layout: entradaposteos
     {% endfor %}
   </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ feed.xml | relative_url }}">via RSS</a></p>
+  <p class="rss-subscribe">subscribe <a href="{{ feed.xml  | relative_url }}">via RSS</a></p>
 
 </div>
