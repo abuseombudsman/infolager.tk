@@ -1,7 +1,7 @@
 ---
 layout: poncontacto
-title: "Ponete en contacto con Infolager.tk"
-description: "Ponete en contacto con Infolager.tk"
+title: "Ponete en contacto con Infolager.tk Guisán"
+description: "Ponete en contacto con Infolager.tk Guisán!"
 permalink: /contacto/
 author: infolager.tk
 ---
